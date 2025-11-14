@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="/js/main.js" type="module"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Task Manager</h1>
+      <form>
+        <h2>Crear tarea</h2>
+        <section>
+          <label for="tituloTarea">Titulo</label>
+          <input type="text" id="tituloTarea" />
+        </section>
+        <section>
+          <label for="descripcionTarea">Descripcion</label>
+          <input type="text" id="descripcionTarea" />
+        </section>
+        <section>
+          <label for="prioridadTarea">Prioridad</label>
+          <select name="prioridadTarea" id="prioridadTarea">
+            <option value="high">High</option>
+            <option value="normal">Normal</option>
+            <option value="low">Low</option>
+          </select>
+        </section>
+        <section>
+          <input type="submit" id="crearTarea" value="Crear Tarea" />
+        </section>
+      </form>
+      <section>
+        <h2>Visualizador tareas</h2>
+        <section>
+          <label for="filtroPrioridad">Filtrar por prioridad</label>
+          <select name="filtroPrioridad" id="filtroPrioridad">
+            <option value="todas">Todas</option>
+            <option value="high">High</option>
+            <option value="normal">Normal</option>
+            <option value="low">Low</option>
+          </select>
+          <section>
+            <label for="filtroEstado">Filtrar por estado</label>
+            <select name="filtroEstado" id="filtroEstado">
+              <option value="">Todas</option>
+              <option value="completadas">Completadas</option>
+              <option value="pendientes">Pendientes</option>
+            </select>
+          </section>
+        </section>
+        <div id="visualizadorTareas"></div>
+      </section>
+    </main>
+  </body>
+</html>
